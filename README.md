@@ -33,13 +33,13 @@ In a Bruin project, what are the required files/directories?
 ANSWER:
 - **`.bruin.yml` and `pipeline/` with `pipeline.yml` and `assets/`**
 
-In a Bruin project, you firstly have the ```.bruin.yml``` file, which is the project's configuration file that will need to exist at the root of the Git repository. It defines connections, environments, as well as secrets (which is why this file should never be commited).
+In a Bruin project, you firstly have the `.bruin.yml` file, which is the project's configuration file that will need to exist at the root of the Git repository. It defines connections, environments, as well as secrets (which is why this file should never be commited).
 
-Next, you also need a ```pipeline/``` directory (it doesn't nessecarily need to be named 'pipeline', but for the sake of the answer, we say that directory name). Within the pipeline directory, there is the ```pipeline.yml``` file and the ```assets/``` directory.
+Next, you also need a `pipeline/` directory (it doesn't nessecarily need to be named 'pipeline', but for the sake of the answer, we say that directory name). Within the pipeline directory, there is the `pipeline.yml` file and the `assets/` directory.
 
-The ```pipeline.yml``` file defines the pipeline's name, schedules, connections, variables, etc.
+The `pipeline.yml` file defines the pipeline's name, schedules, connections, variables, etc.
 
-The ```assets/``` directpory has to be in the same directory as the ```pipeline.yml``` file. This file contains the asset files of the bruin pipeline (parts that build up the pipeline in the first place).
+The `assets/` directpory has to be in the same directory as the `pipeline.yml` file. This file contains the asset files of the bruin pipeline (parts that build up the pipeline in the first place).
 ---
 
 ### Question 2. Materialization Strategies
@@ -50,6 +50,14 @@ You're building a pipeline that processes NYC taxi data organized by month based
 - `replace` - truncate and rebuild entirely
 - `time_interval` - incremental based on a time column
 - `view` - create a virtual table only
+
+#### Question 2 Answer
+
+ANSWER: 
+- **`time_interval` - incremental based on a time column**
+
+The `time_interval` strategy deletes existing records within a specific time interval and then inserts new records from a query ***for*** that interval - hence it is the correct answer for this question.
+
 
 ---
 
