@@ -28,6 +28,18 @@ In a Bruin project, what are the required files/directories?
 - `.bruin.yml` and `pipeline/` with `pipeline.yml` and `assets/`
 - `pipeline.yml` and `assets/` only
 
+#### Question 1 Answer
+
+ANSWER:
+- **`.bruin.yml` and `pipeline/` with `pipeline.yml` and `assets/`**
+
+In a Bruin project, you firstly have the ```.bruin.yml``` file, which is the project's configuration file that will need to exist at the root of the Git repository. It defines connections, environments, as well as secrets (which is why this file should never be commited).
+
+Next, you also need a ```pipeline/``` directory (it doesn't nessecarily need to be named 'pipeline', but for the sake of the answer, we say that directory name). Within the pipeline directory, there is the ```pipeline.yml``` file and the ```assets/``` directory.
+
+The ```pipeline.yml``` file defines the pipeline's name, schedules, connections, variables, etc.
+
+The ```assets/``` directpory has to be in the same directory as the ```pipeline.yml``` file. This file contains the asset files of the bruin pipeline (parts that build up the pipeline in the first place).
 ---
 
 ### Question 2. Materialization Strategies
