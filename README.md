@@ -81,6 +81,13 @@ How do you override this when running the pipeline to only process yellow taxis?
 - `bruin run --var 'taxi_types=["yellow"]'`
 - `bruin run --set taxi_types=["yellow"]`
 
+#### Question 3 Answer
+
+ANSWER:
+- **`bruin run --var 'taxi_types=["yellow"]'`**
+
+The reason it is this answer and not with the variable defined as `taxi_types=yellow` is due to the fact that the `taxi_types` variable is defined as an array, and so when overriding it, we have to pass the value as a JSON-style array to keep with the variable's type.
+
 ---
 
 ### Question 4. Running with Dependencies
@@ -91,6 +98,8 @@ You've modified the `ingestion/trips.py` asset and want to run it plus all downs
 - `bruin run ingestion/trips.py --downstream`
 - `bruin run pipeline/trips.py --recursive`
 - `bruin run --select ingestion.trips+`
+
+#### Question 4 Answer
 
 ---
 
@@ -103,6 +112,9 @@ You want to ensure the `pickup_datetime` column in your trips table never has NU
 - `name: positive`
 - `name: accepted_values, value: [not_null]`
 
+#### Question 5 Answer
+
+
 ---
 
 ### Question 6. Lineage and Dependencies
@@ -114,6 +126,8 @@ After building your pipeline, you want to visualize the dependency graph between
 - `bruin lineage`
 - `bruin show`
 
+#### Question 6 Answer 
+
 ---
 
 ### Question 7. First-Time Run
@@ -124,5 +138,7 @@ You're running a Bruin pipeline for the first time on a new DuckDB database. Wha
 - `--init`
 - `--full-refresh`
 - `--truncate`
+
+#### Question 7 Answer
 
 ---
