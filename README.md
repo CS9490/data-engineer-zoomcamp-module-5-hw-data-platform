@@ -120,6 +120,10 @@ You want to ensure the `pickup_datetime` column in your trips table never has NU
 
 #### Question 5 Answer
 
+ANSWER:
+- `name: not_null`
+
+The `not_null` quality check is the correct one to add to the asset definition to ensure that there are never NULL values.
 
 ---
 
