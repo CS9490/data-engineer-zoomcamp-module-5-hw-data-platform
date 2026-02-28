@@ -156,4 +156,9 @@ You're running a Bruin pipeline for the first time on a new DuckDB database. Wha
 
 #### Question 7 Answer
 
+ANSWER:
+- `--full-refresh`
+
+The `full-refresh` flag makes it so that any tables in the pipeline are recreated if they exist. If they do not exist, the tables are created. Therefore, this is the right flag to use to ensure tables are created from scratch.
+
 ---
