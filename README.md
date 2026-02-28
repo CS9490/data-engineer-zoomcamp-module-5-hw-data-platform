@@ -138,6 +138,11 @@ After building your pipeline, you want to visualize the dependency graph between
 
 #### Question 6 Answer 
 
+ANSWER:
+- `bruin lineage`
+
+The `lineage` command visualizes the asset dependency graph, which is what we are looking to do in this question.
+
 ---
 
 ### Question 7. First-Time Run
