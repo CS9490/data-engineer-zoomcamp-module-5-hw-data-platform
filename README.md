@@ -101,6 +101,12 @@ You've modified the `ingestion/trips.py` asset and want to run it plus all downs
 
 #### Question 4 Answer
 
+ANSWER:
+- **`bruin run ingestion/trips.py --downstream`**
+
+This run command will run the asset passed into the command. The `downstream` flag tells Bruin to run all the downstream dependencies of the asset passed. 
+
+
 ---
 
 ### Question 5. Quality Checks
